@@ -228,8 +228,8 @@ nmap <script> <Plug>(unimpaired-toggle)b  :<C-U>set background=<C-R>=&background
 call s:option_map('c', 'cursorline', 'setlocal')
 call s:option_map('-', 'cursorline', 'setlocal')
 call s:option_map('_', 'cursorline', 'setlocal')
-call s:option_map('u', 'cursorcolumn', 'setlocal')
-call s:option_map('<Bar>', 'cursorcolumn', 'setlocal')
+" call s:option_map('u', 'cursorcolumn', 'setlocal')
+" call s:option_map('<Bar>', 'cursorcolumn', 'setlocal')
 nmap <script> <Plug>(unimpaired-enable)d  :<C-U>diffthis<CR>
 nmap <script> <Plug>(unimpaired-disable)d :<C-U>diffoff<CR>
 nmap <script> <Plug>(unimpaired-toggle)d  :<C-U><C-R>=&diff ? "diffoff" : "diffthis"<CR><CR>
@@ -249,9 +249,6 @@ nmap <script> <Plug>(unimpaired-toggle)v  :<C-U>set <C-R>=(&virtualedit =~# "all
 nmap <script> <Plug>(unimpaired-enable)x  :<C-U>set cursorline cursorcolumn<CR>
 nmap <script> <Plug>(unimpaired-disable)x :<C-U>set nocursorline nocursorcolumn<CR>
 nmap <script> <Plug>(unimpaired-toggle)x  :<C-U>set <C-R>=<SID>CursorOptions()<CR><CR>
-nmap <script> <Plug>(unimpaired-enable)+  :<C-U>set cursorline cursorcolumn<CR>
-nmap <script> <Plug>(unimpaired-disable)+ :<C-U>set nocursorline nocursorcolumn<CR>
-nmap <script> <Plug>(unimpaired-toggle)+  :<C-U>set <C-R>=<SID>CursorOptions()<CR><CR>
 
 function! s:ColorColumn(should_clear) abort
   if !empty(&colorcolumn)
@@ -269,12 +266,6 @@ exe s:Map('n', ']o', '<Plug>(unimpaired-disable)')
 exe s:Map('n', 'yo<Esc>', '<Nop>')
 exe s:Map('n', '[o<Esc>', '<Nop>')
 exe s:Map('n', ']o<Esc>', '<Nop>')
-exe s:Map('n', '=s', '<Plug>(unimpaired-toggle)')
-exe s:Map('n', '<s', '<Plug>(unimpaired-enable)')
-exe s:Map('n', '>s', '<Plug>(unimpaired-disable)')
-exe s:Map('n', '=s<Esc>', '<Nop>')
-exe s:Map('n', '<s<Esc>', '<Nop>')
-exe s:Map('n', '>s<Esc>', '<Nop>')
 
 function! s:RestorePaste() abort
   if exists('s:paste')

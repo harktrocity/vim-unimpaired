@@ -2,6 +2,7 @@
 
 Author:  Tim Pope <http://tpo.pe/>
 License: Same terms as Vim itself (see |license|)
+mod by harktrocity
 
 This plugin is only available if 'compatible' is not set.
 
@@ -23,34 +24,6 @@ is "args" and for the "q" commands is "quickfix".
 *]b*     |:bnext|
 *[B*     |:bfirst|
 *]B*     |:blast|
-*[l*     |:lprevious|
-*]l*     |:lnext|
-*[L*     |:lfirst|
-*]L*     |:llast|
-*[<C-L>* |:lpfile|
-*]<C-L>* |:lnfile|
-*[q*     |:cprevious|
-*]q*     |:cnext|
-*[Q*     |:cfirst|
-*]Q*     |:clast|
-*[<C-Q>* |:cpfile| (Note that <C-Q> only works in a terminal if you disable
-*]<C-Q>* |:cnfile| flow control: stty -ixon)
-*[t*     |:tprevious|
-*]t*     |:tnext|
-*[T*     |:tfirst|
-*]T*     |:tlast|
-*[<C-T>* |:ptprevious|
-*]<C-T>* |:ptnext|
-
-                                                *[f*
-[f                      Go to the file preceding the current one
-                        alphabetically in the current file's directory.  In
-                        the quickfix window, equivalent to |:colder|.
-
-                                                *]f*
-]f                      Go to the file succeeding the current one
-                        alphabetically in the current file's directory.  In
-                        the quickfix window, equivalent to |:cnewer|.
 
                                                 *[n*
 [n                      Go to the previous SCM conflict marker or diff/patch
@@ -85,9 +58,7 @@ On	Off	Toggle	Option
 *[ol*	*]ol*	*yol*	'list'
 *[on*	*]on*	*yon*	'number'
 *[or*	*]or*	*yor*	'relativenumber'
-*[os*	*]os*	*yos*	'spell'
 *[ot*	*]ot*	*yot*	'colorcolumn' ("+1" or last used value)
-*[ou*	*]ou*	*you*	'cursorcolumn'
 *[ov*	*]ov*	*yov*	'virtualedit'
 *[ow*	*]ow*	*yow*	'wrap'
 *[ox*	*]ox*	*yox*	'cursorline' 'cursorcolumn' (x as in crosshairs)
