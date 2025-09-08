@@ -228,8 +228,8 @@ nmap <script> <Plug>(unimpaired-toggle)b  :<C-U>set background=<C-R>=&background
 call s:option_map('c', 'cursorline', 'setlocal')
 call s:option_map('-', 'cursorline', 'setlocal')
 call s:option_map('_', 'cursorline', 'setlocal')
-" call s:option_map('u', 'cursorcolumn', 'setlocal')
-" call s:option_map('<Bar>', 'cursorcolumn', 'setlocal')
+call s:option_map('u', 'cursorcolumn', 'setlocal')
+call s:option_map('<Bar>', 'cursorcolumn', 'setlocal')
 nmap <script> <Plug>(unimpaired-enable)d  :<C-U>diffthis<CR>
 nmap <script> <Plug>(unimpaired-disable)d :<C-U>diffoff<CR>
 nmap <script> <Plug>(unimpaired-toggle)d  :<C-U><C-R>=&diff ? "diffoff" : "diffthis"<CR><CR>
